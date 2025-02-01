@@ -1,0 +1,5 @@
+// import
+
+@import ".//_variable.scss";
+
+// style

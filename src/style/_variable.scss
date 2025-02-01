@@ -1,0 +1,51 @@
+// z-index
+
+//  1 - for basical element
+//  5 - for upper element
+// 10 - for next level
+// 50 - for modal  
+
+// default theme colors
+
+$blue-bg: rgb(62,100,211);
+
+$blue-white-bg: rgb(88, 119, 212);
+
+$disabled: rgb(107, 120, 158);
+
+$grey-bg: #f1f1f1;
+
+$error: red;
+
+$error-bg: rgb(119, 37, 37);
+
+$access-bg: rgb(48, 109, 13);
+
+$access-bg-hover: rgb(72, 161, 20);
+
+$white-grey-bg: rgb(187, 187, 187);
+
+$grey-boxshadow: #d4d4d4;
+
+// fonts 
+
+$Roboto: 'Roboto', sans-serif;
+
+$Open: 'Open Sans', sans-serif;
+
+$Poppins: 'Poppins', sans-serif;
+
+$Montserat: 'Montserrat', sans-serif;
+
+$Nunito: 'Nunito Sans', sans-serif;
+
+// error message 
+
+.error-message {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   font-size: 36px;
+   font-family: $Nunito;
+}

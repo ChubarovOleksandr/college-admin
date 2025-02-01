@@ -1,0 +1,23 @@
+// import
+
+@import "../_variable.scss";
+
+// style
+
+.section-edit {
+  h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .editing-block {
+    display: flex;
+    flex-direction: column;
+    label {
+      font-size: 18px;
+      input {
+        display: block;
+      }
+
+    }
+  }
+}

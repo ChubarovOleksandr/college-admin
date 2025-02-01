@@ -1,0 +1,35 @@
+// import
+
+@import "../_variable.scss";
+
+// style
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .navigation-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    li {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      font-size: 19px;
+      padding: 15px 0;
+      transition: all .3s;
+      a {
+        color: #fff;
+      }
+      &:hover {
+        background: $blue-white-bg;
+      }
+    }
+    li:has(a.active) {
+      background: $blue-white-bg;
+    }
+  }
+}

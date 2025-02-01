@@ -1,0 +1,22 @@
+// import
+
+@import "../_variable.scss";
+
+// style
+
+.panel {
+  display: flex;
+  background: #fff;
+  height: 100%;
+  .page-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 17%;
+    background: $blue-bg;
+  }
+  .page-content {
+    flex: 83%;
+    padding: 30px;
+  }
+}
