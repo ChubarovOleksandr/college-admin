@@ -7,17 +7,39 @@
 .section-edit {
   h1 {
     font-size: 32px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
   .editing-block {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     label {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       font-size: 18px;
+      color: $grey-text;
       input {
-        display: block;
+        width: 300px;
       }
-
+    }
+    .btn-save {
+      margin-top: 10px;
+    }
+  }
+  .technical-scheme {
+    .section-branch {
+      .section-name {
+      }
+      .section-url {
+      }
+      .tab {
+        .tab-name {
+        }
+        .tab-url {
+        }
+      }
     }
   }
 }

@@ -10,9 +10,6 @@ const NavBar = () => {
 
   const pagesList: pageListItem[] = [
     {label: 'Редагування вкладок', routes: '/section-edit'},
-    {label: 'Редагування вкладок', routes: '/section-edit'},
-    {label: 'Редагування вкладок', routes: '/section-edit'},
-    {label: 'Редагування вкладок', routes: '/section-edit'},
   ]
 
   return ( 

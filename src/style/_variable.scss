@@ -27,6 +27,8 @@ $white-grey-bg: rgb(187, 187, 187);
 
 $grey-boxshadow: #d4d4d4;
 
+$grey-text: #7c7c7c;
+
 // fonts 
 
 $Roboto: 'Roboto', sans-serif;
@@ -38,14 +40,3 @@ $Poppins: 'Poppins', sans-serif;
 $Montserat: 'Montserrat', sans-serif;
 
 $Nunito: 'Nunito Sans', sans-serif;
-
-// error message 
-
-.error-message {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 100%;
-   font-size: 36px;
-   font-family: $Nunito;
-}

@@ -9,7 +9,30 @@
   font-family: $Open;
 }
 
+.error-message {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   font-size: 36px;
+   font-family: $Nunito;
+}
+
 .default-input {
   background: $grey-bg;
-  padding: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.btn {
+  background: $blue-bg;
+  font-size: 16px;
+  padding: 10px 30px;
+  color: #fff;
+  border-radius: 10px;
+  transition: all .3s;
+  &:hover {
+    background: $blue-white-bg;
+  }
 }
