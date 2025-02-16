@@ -7,7 +7,7 @@
 .panel {
   display: flex;
   background: #fff;
-  height: 100%;
+  min-height: 100vh;
   .page-navbar {
     display: flex;
     align-items: center;

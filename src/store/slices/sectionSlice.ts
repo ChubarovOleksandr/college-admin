@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { sectionInterface } from "../../types/section";
+import { SectionInterface } from "../../types/section";
 import { getAPI, postAPI } from "../../api/getAPI";
 import { getAPIProps, postAPIProps } from "../../types/api";
 
 interface stateInterface {
-  sections: sectionInterface[]
+  sections: SectionInterface[];
 }
 
 const initialState: stateInterface = {
@@ -18,7 +18,7 @@ export const sectionSlice = createSlice({
   reducers: {
     setSections(state, action) {
       state.sections = action.payload;
-    }
+    },
   },
 });
 

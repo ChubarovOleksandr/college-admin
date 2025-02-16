@@ -1,25 +1,26 @@
 import { useState } from "react";
-import { useAppDispatch } from "../../store/store";
+import { useAppDispatch, useAppSelector } from "../../store/store";
 import { postSectionsThunk } from "../../store/slices/sectionSlice";
-import { sectionInterface } from "../../types/section";
 
 interface Props {
   getSections: () => void;
-  sections: sectionInterface[];
 }
 
-const CreateNewSection = ({ sections, getSections }: Props) => {
-  const [newSectionData, setNewSectionData] = useState({ name: "", url: "", tabs: [] });
+const CreateNewSection = ({ getSections }: Props) => {
+  const [newSectionData, setNewSectionData] = useState({ headerName: "", headerUrl: "", tabs: [] });
 
   const dispatch = useAppDispatch();
+  const sections = useAppSelector((state) => state.section.sections);
 
   const addNewSection = async () => {
     const requestData = {
-      url: "header/save",
+      url: "headers",
       body: [...sections, newSectionData],
     };
 
-    await dispatch(postSectionsThunk(requestData));    
+    setNewSectionData({ headerName: "", headerUrl: "", tabs: [] });
+
+    await dispatch(postSectionsThunk(requestData));
     getSections();
   };
 
@@ -29,9 +30,9 @@ const CreateNewSection = ({ sections, getSections }: Props) => {
         Введіть назву вкладки
         <input
           type="text"
-          value={newSectionData.name}
+          value={newSectionData.headerName}
           onChange={(e) =>
-            setNewSectionData((prevState) => ({ ...prevState, name: e.target.value }))
+            setNewSectionData((prevState) => ({ ...prevState, headerName: e.target.value }))
           }
           className="default-input"
         />
@@ -40,9 +41,9 @@ const CreateNewSection = ({ sections, getSections }: Props) => {
         URL (Необов'язково)
         <input
           type="text"
-          value={newSectionData.url}
+          value={newSectionData.headerUrl}
           onChange={(e) =>
-            setNewSectionData((prevState) => ({ ...prevState, url: e.target.value }))
+            setNewSectionData((prevState) => ({ ...prevState, headerUrl: e.target.value }))
           }
           className="default-input"
         />

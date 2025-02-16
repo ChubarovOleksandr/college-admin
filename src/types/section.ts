@@ -1,10 +1,10 @@
-export interface tabInterface {
+export interface TabInterface {
   tabName: string;
-  url: string;
+  tabUrl: string;
 }
 
-export interface sectionInterface {
-  name: string;
-  tabs: tabInterface[];
-  url: string;
+export interface SectionInterface {
+  headerName: string;
+  tabs: TabInterface[];
+  headerUrl: string;
 }
