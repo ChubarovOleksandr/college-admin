@@ -1,18 +1,10 @@
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import '../style/components/NavBar.scss';
+import {pagesList} from "../routes.ts";
 
 const NavBar = () => {
 
-  interface pageListItem {
-    label: string,
-    routes: string,
-  }
-
-  const pagesList: pageListItem[] = [
-    {label: 'Редагування вкладок', routes: '/section-edit'},
-  ]
-
-  return ( 
+  return (
     <nav className="navigation">
       <ul className="navigation-list">
         {pagesList.map(page => (
@@ -22,7 +14,7 @@ const NavBar = () => {
         ))}
       </ul>
     </nav>
-   );
+  );
 }
- 
+
 export default NavBar;

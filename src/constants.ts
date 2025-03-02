@@ -1,0 +1,1 @@
+export const NEW_PAGE_LS = 'new-page';

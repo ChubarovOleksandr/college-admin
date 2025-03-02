@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { sectionSlice } from "./slices/sectionSlice";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import {creatingPageSlice} from "./slices/creatingPage/creatingPageSlice.ts";
 
 export const store = configureStore({
   reducer: {
     section: sectionSlice.reducer,
+    creatingPage: creatingPageSlice.reducer,
   },
 });
 
