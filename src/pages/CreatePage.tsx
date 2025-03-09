@@ -6,6 +6,7 @@ import '../style/pages/CreatePage.scss';
 import {useEffect} from "react";
 import {setPage} from "../store/slices/creatingPage/creatingPageSlice.ts";
 import {newPageInterface} from "../store/slices/creatingPage/interfaces.ts";
+import {ContentPreview} from "../components/createPage/contentPreview/ContentPreview.tsx";
 
 const CreatePage = () => {
   const dispatch = useAppDispatch();
@@ -18,7 +19,7 @@ const CreatePage = () => {
   useEffect(() => {
     const unfinishedPage = localStorage.getItem(NEW_PAGE_LS);
     if(unfinishedPage) {
-      const parsedPageData: newPageInterface = JSON.parse(unfinishedPage);  TODO
+      const parsedPageData: newPageInterface = JSON.parse(unfinishedPage);  /*TODO*/
       dispatch(setPage(parsedPageData));
     }
   }, [])
@@ -34,9 +35,9 @@ const CreatePage = () => {
         <button className="btn__save-page" onClick={onSavePage}>Готово</button>
       </div>
       <div className="content">
-
+        <ContentPreview />
       </div>
-      {newCreatingPage.newBlockType && newCreatingPage.newBlockType ? (
+      {newCreatingPage.newBlockType ? (
         <CustomizeNewBlock newBlockType={newCreatingPage.newBlockType}/>
       ) : (
         <AddBlock />

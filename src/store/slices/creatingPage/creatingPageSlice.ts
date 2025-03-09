@@ -22,6 +22,7 @@ export const creatingPageSlice = createSlice({
     },
     addNewBlock(state, action: { payload: (videoBlock | textBlock), type: string }) {
       state.content.push(action.payload);
+      state.newBlockType = null;
     },
   },
 });

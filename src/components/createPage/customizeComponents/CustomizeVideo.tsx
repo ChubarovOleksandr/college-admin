@@ -1,4 +1,5 @@
-import {useId, useState} from "react";
+import {useState} from "react";
+import shortid from 'shortid';
 import {useAppDispatch} from "../../../store/store.ts";
 import {addNewBlock} from "../../../store/slices/creatingPage/creatingPageSlice.ts";
 import {videoBlock} from "../../../store/slices/creatingPage/interfaces.ts";
@@ -7,7 +8,7 @@ export const CustomizeVideo = () => {
   const dispatch = useAppDispatch();
 
   const [videoUrl, setVideoUrl] = useState('');
-  const blockId = useId();
+  const blockId = shortid();
 
   const onSave = () => {
     if(videoUrl) {
