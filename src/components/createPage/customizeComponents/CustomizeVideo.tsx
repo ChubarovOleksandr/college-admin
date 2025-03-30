@@ -3,6 +3,7 @@ import shortid from 'shortid';
 import {useAppDispatch} from "../../../store/store.ts";
 import {addNewBlock} from "../../../store/slices/creatingPage/creatingPageSlice.ts";
 import {videoBlock} from "../../../store/slices/creatingPage/interfaces.ts";
+import {blockTypeEnum} from "../../../store/slices/creatingPage/enums.ts";
 
 export const CustomizeVideo = () => {
   const dispatch = useAppDispatch();
@@ -14,7 +15,8 @@ export const CustomizeVideo = () => {
     if(videoUrl) {
       const newBlock: videoBlock = {
         blockId,
-        url: videoUrl
+        url: videoUrl,
+        type: blockTypeEnum.video,
       }
 
       dispatch(addNewBlock(newBlock));

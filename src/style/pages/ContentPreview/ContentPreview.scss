@@ -1,0 +1,13 @@
+// import
+
+@import "../../_variable.scss";
+
+// style
+
+.content__block {
+  margin: 25px 0;
+  &:has(.video__block) {
+    display: flex;
+    justify-content: center;
+  }
+}

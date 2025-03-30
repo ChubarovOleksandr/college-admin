@@ -4,6 +4,7 @@ import 'quill/dist/quill.snow.css';
 import {useAppDispatch} from "../../../store/store.ts";
 import {addNewBlock} from "../../../store/slices/creatingPage/creatingPageSlice.ts";
 import {textBlock} from "../../../store/slices/creatingPage/interfaces.ts";
+import {blockTypeEnum} from "../../../store/slices/creatingPage/enums.ts";
 
 export const CustomizeText = () => {
   const dispatch = useAppDispatch();
@@ -16,6 +17,7 @@ export const CustomizeText = () => {
     const newBlock: textBlock = {
       blockId,
       htmlString: htmlContent,
+      type: blockTypeEnum.text,
     }
 
     dispatch(addNewBlock(newBlock))
