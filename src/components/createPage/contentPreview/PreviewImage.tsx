@@ -1,24 +1,23 @@
-import { textBlock } from "../../../store/slices/creatingPage/interfaces.ts";
-import "../../../style/pages/ContentPreview/TextBlock.scss";
-import "quill/dist/quill.snow.css";
+import { imageBlock } from "../../../store/slices/creatingPage/interfaces.ts";
+import "../../../style/pages/ContentPreview/ImageBlock.scss";
 import removeIcon from "../../../assets/delete.png";
 import { useState } from "react";
 import { useRemoveBlock } from "./utils.ts";
 
 interface Props {
-  contentBlock: textBlock;
+  contentBlock: imageBlock;
 }
 
-const PreviewText = ({ contentBlock }: Props) => {
+export const PreviewImage = ({ contentBlock }: Props) => {
   const [isHover, setHover] = useState(false);
 
   const onRemoveBlock = useRemoveBlock();
 
   return (
     <div
+      className="image__blocks"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="text__block-wrapper"
     >
       <button
         className={`remove-btn ${isHover ? "visible" : ""}`}
@@ -26,12 +25,11 @@ const PreviewText = ({ contentBlock }: Props) => {
       >
         <img src={removeIcon} alt="remove" />
       </button>
-      <div
-        className="ql-editor text__block"
-        dangerouslySetInnerHTML={{ __html: contentBlock.htmlString }}
-      />
+      {contentBlock.images.map((file, index) => {
+        const objectURL = URL.createObjectURL(file);
+
+        return <img key={index} src={objectURL} alt="image-preview" />;
+      })}
     </div>
   );
 };
-
-export default PreviewText;

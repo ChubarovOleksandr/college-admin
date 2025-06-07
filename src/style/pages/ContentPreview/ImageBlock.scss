@@ -1,0 +1,19 @@
+// import
+
+@import "../../_variable.scss";
+
+// style
+
+.image__blocks {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  max-height: 250px;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: inherit;
+  }
+}

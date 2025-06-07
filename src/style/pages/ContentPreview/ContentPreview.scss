@@ -6,6 +6,19 @@
 
 .content__block {
   margin: 25px 0;
+
+  .remove-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    opacity: 0;
+    transition: opacity 0.4s;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
   &:has(.video__block) {
     display: flex;
     justify-content: center;

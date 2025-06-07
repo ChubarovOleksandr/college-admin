@@ -4,6 +4,10 @@
 
 // style
 
-.text__block {
-  font-size: 20px;
+.text__block-wrapper {
+  position: relative;
+
+  .text__block {
+    font-size: 20px;
+  }
 }

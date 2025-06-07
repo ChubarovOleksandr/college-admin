@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getAPIProps, postAPIProps } from "../types/api";
 
-const instance = axios.create({ baseURL: "http://13.61.34.213:8000/" });
+const instance = axios.create({ baseURL: "http://185.233.36.82:8000/" });
 
 export const getAPI = async (data: getAPIProps) => {
   const { url, config } = data;

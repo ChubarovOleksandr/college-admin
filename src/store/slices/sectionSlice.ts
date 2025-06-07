@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { SectionInterface } from "../../types/section";
-import { getAPI, postAPI } from "../../api/getAPI";
+import { getAPI, postAPI } from "../../api/api.ts";
 import { getAPIProps, postAPIProps } from "../../types/api";
 
 interface stateInterface {
@@ -30,22 +30,20 @@ export const getSectionsThunk = createAsyncThunk<any, getAPIProps>(
   "section/get_thunk",
   async function (data: getAPIProps, { rejectWithValue }) {
     try {
-      const response = await getAPI(data);
-      return response;
+      return await getAPI(data);
     } catch (error) {
       return rejectWithValue(error);
     }
-  }
+  },
 );
 
 export const postSectionsThunk = createAsyncThunk<any, postAPIProps>(
   "section/post_thunk",
   async function (data: postAPIProps, { rejectWithValue }) {
     try {
-      const response = await postAPI(data);
-      return response;
+      return await postAPI(data);
     } catch (error) {
       return rejectWithValue(error);
     }
-  }
+  },
 );

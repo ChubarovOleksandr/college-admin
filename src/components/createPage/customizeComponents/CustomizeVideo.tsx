@@ -26,7 +26,7 @@ export const CustomizeVideo = () => {
   return (
     <div className='customize-video'>
       <label>
-        Вставте посилання на відео
+        Вставте посилання на відео. На данний момент підтримується посилання відео тільки з гугл диску!
         <input type="text" onChange={e => setVideoUrl(e.target.value)} placeholder='приклад: https://youtube.com/video-dlya-texnikuma'/>
       </label>
       <button onClick={onSave}>Зберегти</button>
